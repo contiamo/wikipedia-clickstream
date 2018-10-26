@@ -1,11 +1,11 @@
 # Wikipedia Clickstream
 
-The idea for this bundle was taken from 
+The idea for this bundle was taken from
 [this blog post](https://blog.wikimedia.org/2018/01/16/wikipedia-rabbit-hole-clickstream/).
 
-## Prerequisites 
+## Setup
 
-Build the docker image with 
+Build the docker image with
 ```
-./build_image.sh
-``` 
+make build-docker
+```

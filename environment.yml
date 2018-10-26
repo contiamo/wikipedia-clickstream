@@ -1,0 +1,7 @@
+name: root
+channels:
+  - conda-forge
+dependencies:
+  - pymc3=3.5
+  - r-ggraph=1.0.0
+  - r-sparklyr=0.7.0
