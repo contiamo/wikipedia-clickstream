@@ -1,4 +1,4 @@
-FROM contiamo/datascience-all-lab:latest
+FROM contiamo/datascience-lab-all:latest
 
 USER root
 
