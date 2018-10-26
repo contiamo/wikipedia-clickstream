@@ -1,0 +1,14 @@
+api_version: 0.0.2
+name: Wikipedia Clickstream
+edit:
+  image: wikipedia-clickstream:latest
+functions:
+  echo:
+    image: functions/alpine:latest
+    command: xargs echo
+  ls:
+    image: functions/alpine:latest
+    command: xargs ls -al
+  wc:
+    image: functions/alpine:latest
+    command: wc
