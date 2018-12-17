@@ -18,3 +18,13 @@ help: ## print this help info
 .PHONY: build-docker
 build-docker: ## build Editor docker image
 	docker build -t wikipedia-clickstream:latest -f Dockerfile .
+
+.PHONY: download-data
+download-data: ## download data required for functions
+	aws s3 cp s3://contiamo-datascience/wikipedia-clickstream/processed/curr.parquet data/processed/
+	aws s3 cp s3://contiamo-datascience/wikipedia-clickstream/processed/prev.parquet data/processed/
+
+.PHONY: cp-data
+cp-data: ## copy data from data folder to common folder
+	cp data/processed/curr.parquet common/
+	cp data/processed/prev.parquet common/

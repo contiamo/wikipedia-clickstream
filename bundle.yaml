@@ -5,6 +5,9 @@ edit:
   environment:
     AWS_CONFIG_FILE: /var/openfaas/secrets/aws-config
 functions:
-  echo:
-    image: functions/alpine:latest
-    command: xargs echo
+  prev-referer:
+    image: prev-referer
+    command: python3 index.py
+  curr-referer:
+    image: curr-referer
+    command: python3 index.py
