@@ -19,6 +19,11 @@ help: ## print this help info
 build-docker: ## build Editor docker image
 	docker build -t wikipedia-clickstream:latest -f Dockerfile .
 
+.PHONY: push-docker
+push-docker: ## push image to Staging
+	docker tag wikipedia-clickstream:latest eu.gcr.io/staging-205711/wikipedia-clickstream:latest
+	docker push eu.gcr.io/staging-205711/wikipedia-clickstream:latest
+
 .PHONY: download-data
 download-data: ## download data required for functions
 	aws s3 cp s3://contiamo-datascience/wikipedia-clickstream/processed/curr.parquet data/processed/
