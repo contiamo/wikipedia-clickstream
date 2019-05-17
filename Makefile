@@ -21,8 +21,8 @@ build-docker: ## build Editor docker image
 
 .PHONY: push-docker
 push-docker: ## push image to Staging
-	docker tag wikipedia-clickstream:latest eu.gcr.io/staging-205711/wikipedia-clickstream:latest
-	docker push eu.gcr.io/staging-205711/wikipedia-clickstream:latest
+	docker tag wikipedia-clickstream:latest eu.gcr.io/contiamo-prod/wikipedia-clickstream:latest
+	docker push eu.gcr.io/contiamo-prod/wikipedia-clickstream:latest
 
 .PHONY: download-data
 download-data: ## download data required for functions

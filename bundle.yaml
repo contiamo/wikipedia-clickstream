@@ -1,7 +1,7 @@
 api_version: 0.0.2
 name: Wikipedia Clickstream
 edit:
-  image: eu.gcr.io/staging-205711/wikipedia-clickstream:latest
+  image: eu.gcr.io/contiamo-prod/wikipedia-clickstream:latest
   environment:
     AWS_CONFIG_FILE: /var/openfaas/secrets/aws-config
 functions:
